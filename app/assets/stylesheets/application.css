@@ -1,18 +1,41 @@
+html {
+  font-size: 16px;
+  h1: 3rem;
+}
+
 body {
   background: linear-gradient(45deg, #88d8c0, #9bc4e3) fixed;
   width: 100%;
   height: 100%;
-  font-family: Helvetica, sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   color: white;
 }
 
-ul {
+#main-container {
+  width: 50%;
+  margin: auto;
+}
+
+.steps {
+  width: 80%;
+  padding: 0.5rem;
+  margin: 0;
+
+}
+
+.numbers {
+  font-size: 8rem;
+  float: left;
+  padding-right: 1rem;
+}
+
+.goal-container ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-li {
+.goal-container li {
   background-color: #93dbc6;
   font-size: 24px;
   border: 2px solid white;
