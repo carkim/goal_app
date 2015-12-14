@@ -1,0 +1,6 @@
+<tr>
+  <td class="goal">
+      <%= link_to goal.title, goal_path(goal) %>
+      <span>Posted <%= time_ago_in_words(goal.created_at) %> ago.</span>
+  </td>
+</tr>

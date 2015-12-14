@@ -1,0 +1,9 @@
+<%= form_for(@goal) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <p>
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </p>
+<%= f.submit %>
+<% end %>

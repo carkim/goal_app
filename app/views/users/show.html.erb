@@ -1,0 +1,33 @@
+<p><%= notice %></p>
+<div>
+
+</div>
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<div id="goals-container">
+  <h1>My Goals</h1>
+  <% unless @user.goals.empty? %>
+  <table class="goals" summary="User goals">
+    <%= render @goals %>
+  </table>
+  <%= will_paginate @goals %>
+  <% end %>
+</div>
+<td>
+  <strong>Name</strong> <%= @user.username %><br />
+  <strong>URL</strong > <%= link_to user_path(@user), @user %><br />
+  <strong>Goals</strong> <%= @user.goals.count %>
+</td>
+<br>
+<%= link_to "Create A New Goal", new_goal_path %><br>
+
+<%= link_to 'Edit', edit_user_path(@user) %><br>
+<%= link_to 'Back', users_path %>
