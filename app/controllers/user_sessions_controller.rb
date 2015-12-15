@@ -5,7 +5,7 @@ class UserSessionsController < ApplicationController
 
   def create
     if login(params[:email], params[:password])
-      redirect_back_or_to(goals_path, notice: 'Logged in successfully.')
+      redirect_back_or_to goals_path
     else
       render action :new, notice: 'Login failed.'
     end
