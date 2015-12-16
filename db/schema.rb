@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151216000019) do
+ActiveRecord::Schema.define(version: 20151216043536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20151216000019) do
   add_index "goals", ["user_id"], name: "index_goals_on_user_id", using: :btree
 
   create_table "notes", force: :cascade do |t|
-    t.date     "date"
     t.text     "body"
     t.integer  "goal_id"
     t.datetime "created_at"
