@@ -14,7 +14,7 @@ body {
 }
 
 #main-container {
-  width: 50%;
+  width: 70%;
   margin: auto;
 }
 /*Main Index page*/
@@ -31,7 +31,7 @@ body {
   height: 120px;
 }
 
-.goal-container ul {
+/*.goal-container ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -44,16 +44,17 @@ body {
   padding: 10px;
   margin: 20px;
   width: 90%;
-}
+}*/
 
 a {
   color: #f3fbf8;
   text-decoration: none;
 }
 
-a:hover {
+a:hover, .button:hover {
   background-color: #7ce7ca;
 }
+
 
 .button {
   display: inline;
@@ -69,11 +70,34 @@ a:hover {
 
 #goals-container {
   margin: 0 auto;
-  width: 50%;
+  width: 80%;
+  text-align: center;
 }
 
+.goals, .new-goal {
+  float: left;
+	width: 30%;
+	margin: 1rem;
+  height: 24vw;
+  background-color: pink;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 24vw;
+}
+
+.goal-title {
+  font-size: 3rem;
+  color: white;
+}
+
+.new-goal {
+  background-color: gray;
+  font-size: 3rem;
+}
+
+/*Display for each Goal*/
 .outer-container {
-  width: 40%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -83,30 +107,37 @@ a:hover {
 }
 
 .goal-container {
+  float: left;
+  border-radius: 0.2rem;
   color: #f9f8f1;
   border: 1px solid #f9f8f1;
-  width: 100%;
+  width: 60%;
   line-height: 20px;
   padding: 1rem;
-  margin: 1rem;
 }
 
 .notes-container {
+  width: 30%;
+  float: right;
+}
+
+.note-form {
+  border-radius: 0.2rem;
   background: rgba(255,255,255,0.5);
   color: black;
-  margin: 50px auto;
   border: 1px solid #f9f8f1;
   padding: 1rem;
   line-height: 20px;
-  width: 100%;
-  margin: 1rem;
 }
 
 .notes {
   background-color: #abe3d2;
-  width: 95%;
   padding: 1rem;
   margin: 0.5rem 0rem;
+}
+
+.notes p {
+  color: gray;
 }
 
 /*login form*/
@@ -158,10 +189,10 @@ a:hover {
   background-color: #2CBBBB;
 }
 
-#line {
+.line {
   width: 90%;
   height: 3px;
-  background-color: #6cac99;
+  background-color: #FFFFFF;
 }
 /*profile page*/
 #profile-box {
