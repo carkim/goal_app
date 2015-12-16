@@ -2,6 +2,7 @@
 <div class="outer-container">
   <div class="goal-container">
     <h1><%= @goal.title %></h1>
+    <span><%= @goal.created_at.strftime("%b %d, %Y") %></span>
     <div class="line"></div>
     <p>
       <%= @goal.body %>
@@ -12,8 +13,16 @@
   </div>
 
   <div class="notes-container">
+    <div class="note-form">
     <%= render partial: 'notes/form' %>
-    <h3>Notes:</h3>
-    <%= render partial: 'goals/note', collection: @goal.notes %>
+    </div>
+
+    <% @goal.notes.each do |note| %>
+    <div class="notes">
+      <h3>Note:</h3>
+      <%= note.body %>
+      <p>Posted <%= note.goal.created_at.strftime("%m/%d/%y") %></p>
+    </div>
+    <% end %>
   </div>
 </div>
