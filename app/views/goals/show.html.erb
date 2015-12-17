@@ -1,15 +1,26 @@
 
 <div class="outer-container">
   <div class="goal-container">
-    <h1><%= @goal.title %></h1>
-    <span><%= @goal.created_at.strftime("%b %d, %Y") %></span>
+    <div class="goal-wrapper">
+      <h2><%= @goal.title %></h2>
+      <span style="font-size: 14px;">--- Created: <%= @goal.created_at.strftime("%b %d, %Y") %></span> --- <% if @goal.deadline? %><span style="font-size: 14px;">Accomplish by: <%= @goal.deadline.strftime("%b %d, %Y") %></span>
+      <% end %>
+      <div class="line"></div>
+      <p>
+        <%= @goal.body %>
+      </p>
+      <p>
+        <% if @goal.deadline? %>
+        <span style="font-size: 1.5rem; color: "><%= distance_of_time_in_words_to_now(@goal.deadline, include_seconds: true) %></span> left
+        <% else %>
+        <%= link_to "++ Add deadline", edit_goal_path(@goal), :style => 'color: #aeada8;' %>
+        <% end %>
+      </p>
+    </div>
     <div class="line"></div>
-    <p>
-      <%= @goal.body %>
-    </p>
-    <%= link_to "EDIT", edit_goal_path(@goal), class: "button" %>
+    <%= button_to "EDIT", edit_goal_path(@goal), class: "button", :method => :get %>
     <%= button_to "COMPLETED", goal_path(@goal), class: "button", method: :delete, data: {confirm: "Confirm that you want to delete the goal."} %>
-    <%= button_to "Back to Goals", goals_path, class: "button", :method => :get %>
+    <%= button_to "ALL GOALS", goals_path, class: "button", :method => :get %>
   </div>
 
   <div class="notes-container">
@@ -21,7 +32,7 @@
     <div class="notes">
       <h3>Note:</h3>
       <%= note.body %>
-      <p>Posted <%= note.goal.created_at.strftime("%m/%d/%y") %></p>
+      <p>Posted <%= note.goal.created_at.strftime("%m.%d.%y") %></p>
     </div>
     <% end %>
   </div>

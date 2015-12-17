@@ -13,17 +13,19 @@
   </script>
 </head>
 <body>
-  <div id="login">
-    <% if logged_in? %>
-    <%= link_to "Logged in as #{current_user.username}", user_path(current_user) %>
-    <%= link_to "( Logout )", logout_path %>
-    <% else %>
-    <%= link_to "Login", login_path %>
-    <% end %>
-  </div>
+  <header>
+    <div id="login">
+      <%= link_to "Home", root_path %> |
+      <% if logged_in? %>
+      <%= link_to "Logged in as #{current_user.username}", goals_path(current_user) %>
+      <%= link_to "( Logout )", logout_path %>
+      <% else %>
+      <%= link_to "Login", login_path %>
+      <% end %>
+    </div>
+  </header>
 
   <%= yield %>
 
-  <footer>Learn More</footer>
 </body>
 </html>
