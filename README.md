@@ -8,7 +8,6 @@ User will use this app to keep track of their goals and stay motivated. They can
 * Ruby
 * Ruby on Rails
 * Sorcery
-* Will-Paginate
 * Postgresql
 * Jquery
 * JS
@@ -18,3 +17,6 @@ goal_app.pdf included above
 
 ---------------------------------
 ![Snapshot of user goal index](/snapshot.png)
+_________________________________
+
+![Snapshot of user goal index](/snapshot2.png)
