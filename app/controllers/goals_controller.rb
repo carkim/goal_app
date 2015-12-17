@@ -18,14 +18,6 @@ before_filter :require_login
     @goal.save
     redirect_to goal_path(@goal)
   end
-  # def create
-  #   @goal = current_user.goals.build params[:goal]
-  #   if @goal.save
-  #     redirect_to root_path
-  #   else
-  #     render 'pages/index'
-  #   end
-  # end
 
   def edit
     @goal = Goal.find params[:id]

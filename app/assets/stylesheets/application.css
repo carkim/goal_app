@@ -23,18 +23,43 @@ header {
   height: 5rem;
 }
 
+#start {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  right: 3rem;
+  top: 2rem;
+  background-color: #34CACA;
+  border: 1px solid #27A0A0;
+  color: #FFFFFF;
+  font-size: 1rem;
+  padding: 0.8rem;
+  text-decoration: none;
+}
+
 #login {
   float: right;
   margin: 1rem 3rem;
 }
 
+/*Main Index page*/
 #main-container {
   width: 70%;
   margin: auto;
   margin-bottom: 5rem;
 }
 
-/*Main Index page*/
+.main-reasons {
+  padding: 1rem 0rem;
+  margin: 0rem 0rem 2rem 0rem;
+}
+
+.main-info {
+  margin: 2rem 2rem;
+  width: 70%;
+  padding: 4rem 0rem;
+}
+
 .steps {
   width: 80%;
   padding: 0.5rem;
@@ -62,7 +87,6 @@ a:hover, .button:hover {
 }
 
 .button {
-  /*border-radius: 0.2rem;*/
   background-color: #34CACA;
   border: 1px solid #27A0A0;
   display: inline;
@@ -200,9 +224,11 @@ a:hover, .button:hover {
   margin: 0.5rem 0rem 1.5rem;
   background-color: #fcfbf8;
 }
-/*profile page*/
-#profile-box {
 
+/*profile page*/
+#profile-box p {
+  width: 100%;
+ float: left;
 }
 /*footer*/
 footer {

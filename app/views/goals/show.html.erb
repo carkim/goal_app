@@ -11,7 +11,7 @@
       </p>
       <p>
         <% if @goal.deadline? %>
-        <span style="font-size: 1.5rem; color: "><%= distance_of_time_in_words_to_now(@goal.deadline, include_seconds: true) %></span> left
+        <span style="font-size: 1.5rem;">-- <%= distance_of_time_in_words_to_now(@goal.deadline, include_seconds: true) %></span> left
         <% else %>
         <%= link_to "++ Add deadline", edit_goal_path(@goal), :style => 'color: #aeada8;' %>
         <% end %>

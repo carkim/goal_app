@@ -1,4 +1,29 @@
+<% content_for :head do %>
+  <script type="text/javascript">
+    $(window).scroll(function() {
+    if ($(this).scrollTop() > 500) {
+        $('#start').show();
+      } else {
+        $('#start').hide();
+      }
+    });
+  </script>
+<% end %>
+
 <div id="main-container">
+  <div class="main-reasons">
+    <h1>- Accomplish One Thing</h1>
+    <h1>- Accomplish More</h1>
+    <h1>- Keep Track</h1>
+    <h1>- Finish That Something</h1>
+    <h1>- Remember What's Important</h1>
+  </div>
+  <div class="line"></div>
+  <div class="main-info">
+    <h3>We all could use a little help. Stay motivated and keep on track. Encourage yourself or keep note of discouragements. </h3>
+  </div>
+  <div class="line"></div>
+  <%= button_to "Make A Goal", new_user_path, :id => "start", :method => :get %>
     <div class="numbers">1</div>
     <div class="steps">
       <h3>Create a Vision</h3>
@@ -17,6 +42,6 @@
     <div class="numbers">4</div>
     <div class="steps">
       <h3>Celebrate Your Success</h3>
-      <p>This is the best part. It's important to celebrate what you've accomplished. Reflect on what you've accomplished to fuel you ahead.</p>
+      <p>This is the best part. It's important to celebrate what you've accomplished. Reflect on your success to fuel you ahead.</p>
     </div>
 </div>

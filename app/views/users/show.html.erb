@@ -1,25 +1,16 @@
-<p><%= notice %></p>
-<div id="profile-box">
-  <ul>
-    <li>Username: <%= @user.username %></li>
-    <li>Email: <%= @user.email %></li>
-  </ul>
-</div>
 
 <div id="goals-container">
-  <h1>My Goals</h1>
+  <h1>Goals</h1>
   <% unless @user.goals.empty? %>
   <table class="goals" summary="User goals">
     <%= render @goals %>
   </table>
   <%= will_paginate @goals %>
   <% end %>
+  <div class="new-goal">
+  <%= link_to "New Goal", new_goal_path %>
 </div>
-<td>
-  <strong>Name</strong> <%= @user.username %><br />
-  <strong>Goals</strong> <%= @user.goals.count %>
-</td>
-<br>
-<%= link_to "Create A New Goal", new_goal_path %><br>
 
-<%= link_to 'Edit Account', edit_user_path(@user) %><br>
+<div id="profile-box">
+  <p><%= notice %></p>
+</div>
